@@ -1,0 +1,600 @@
+/* Mengatur padding dan margin, mengganti style font dan box sizing untuk keseluruhan halaman */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+/******************************************* WEBKIT ********************************************/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #31cbff;
+}
+
+/* Ini agar transisi scroll smooth/perlahan dan tombol slider up */
+html {
+  scroll-behavior: smooth;
+}
+
+.gotopbtn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #31cbff;
+  bottom: 40px;
+  right: 50px;
+  border-radius: 50%;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  font-size: 22px;
+  transition: transform 0.6s;
+  z-index: 1000000000;
+}
+
+.gotopbtn:hover {
+  transform: translateY(-0.9rem);
+}
+
+/************************************* Header ************************************/
+
+/* Memberi Background gambar bagian header, mengatur lebar dan tingginya dan mengatur posisi background gambarnya */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+}
+
+/* Memberi display flex agar list sejajar dan berdampingan, mengatur posisi dan jarak antar list */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+/* Memberi warna pada tombol home, menghilangkan text underline, memberi border, radius dan padding untuk background tombolnya  */
+.home-btn {
+  background-color: #31cbff;
+  color: black;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-weight: bolder;
+  padding: 12px 25px;
+  margin-top: 1%;
+  border-radius: 50px;
+  transition: 0.6s;
+  letter-spacing: 1px;
+}
+
+/* Memberi efek scale pada tombol home saat cursor diarahkan ke atas tombol */
+.home-btn:hover {
+  background-color: transparent;
+  border: 1px solid #31cbff;
+  color: #31cbff;
+}
+
+/* Mengatur display agar list sejajar dan memberi padding */
+header ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 27px;
+  font-size: 18px;
+}
+
+/* Memberi warna pada list link, menghilangkan text underline, memberi ketebalan huruf dan memberi huruf kapital pada setiap awal text */
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Memberi efek warna pada list link saat cursor diarahkan ke atasnya */
+header ul li a:hover {
+  color: #31cbff;
+}
+
+/* Mengatur posisi absolute agar mudah diatur posisinya */
+.isi-hero {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+
+/* Memberi warna pada h1, mengatur margin atas bawah dan mengatur ukuran font */
+h1 {
+  color: white;
+  margin: 30px 0 -5px;
+  font-size: 75px;
+  cursor: default;
+}
+
+/* Memberi warna pada h3, mengatur bawah dan mengatur ukuran font */
+h3 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 40px;
+  cursor: default;
+}
+
+/* Memberi warna pada h4, mengatur jarak antar huruf dan mengatur ukuran font */
+h4 {
+  color: white;
+  letter-spacing: 1px;
+  font-size: 20px;
+  cursor: default;
+}
+
+/* Memberi posisi pada tombol "see more" menghilangkan outline dan border, mengatur padding, border radius, mengubah warna dan menebalkan hurufnya */
+.isi-btn input {
+  position: absolute;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: #31cbff;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+/* Memberi efek scale pada tombol "see more" saat cursor diarahkan ke atasnya */
+.isi-btn input:hover {
+  transform: scale(1.1);
+}
+
+/* Memberi warna pada teks khusus yang diberi tag span */
+span {
+  color: #31cbff;
+}
+
+/******************************************** INI BAGIAN STYLE ABOUT ********************************************/
+
+/* Memberi lebar, warna dan padding untuk box about */
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 125px 0px;
+  background-color: #131313;
+}
+
+/* Mengatur tinggi dan lebar dan juga border radius gambar agar menjadi bulat */
+.about img {
+  height: auto;
+  width: 400px;
+  border-radius: 50%;
+}
+
+/* mengatur lebar box dari class text about yang tediri dari sekumpulan text */
+.text-about {
+  width: 550px;
+}
+
+/* Memberi lebar dan lebar maksimal, memberi margin auto untuk kiri dan kanan, membuat text ada disamping gambar dan memposisikannya ditengah lalu memberi jarak */
+.isi-about {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Memberi warna pada h2 dan mengganti ukuran font dan mengatur margin bawahnya */
+.text-about h2 {
+  color: white;
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+
+/* Memberi warna pada h5 dan memberi jarak antar huruf lalu mengganti ukuran font dan mengatur margin bawahnya */
+.text-about h5 {
+  color: white;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Memberi warna pada p dan mengganti ukuran font dan mengatur margin bawahnya */
+.text-about p {
+  color: #cacaca;
+  line-height: 20px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Memberi background warna pada tombol, mengganti warna text, menebalkan huruf, mengatur padding keempat sisi tombol, memberi border radius dan memberi efek transisi */
+button {
+  background-color: #31cbff;
+  color: black;
+  font-weight: bolder;
+  padding: 13px 30px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+/* Memberi efek scale pada tombol saat cursor diarahkan diatas tombolnya */
+button:hover {
+  transform: scale(1.1);
+}
+
+/**************************************** INI BAGIAN STYLE PORTOFOLIO *****************************************/
+
+.portofolio {
+  background: #101010;
+  height: 100vh;
+  width: 100%;
+  padding: 65px 0px 100px 0px;
+}
+
+.title h2 {
+  color: white;
+  font-size: 75px;
+  width: 1100px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.card {
+  height: 180px;
+  width: 250px;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cell-port {
+  width: 1100px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.cell-port a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+.cell-port a {
+  background-color: #31cbff;
+  padding: 13px 30px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+
+.cell-port a:hover {
+  background-color: transparent;
+  border: 2px solid #31cbff;
+  color: #31cbff;
+}
+
+
+
+/******************************************** INI BAGIAN BLOG ***********************************************/
+
+.service {
+  background: #131313;
+  width: 100%;
+  height: 100vh;
+  padding: 30px 0px 100px 0px;
+}
+
+.title-blog h2 {
+  color: white;
+  font-size: 75px;
+  width: 1100px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.box-blog img {
+  display: block;
+  width: 260px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.box-blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.card-blog {
+  height: 408px;
+  width: 300px;
+  padding: 20px 20px 35px 20px;
+  background-color: #101010;
+  border-radius: 30px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+h5 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.pra p {
+  color: #cacaca;
+  font-size: 13.6px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
+.card-blog .blog-btn {
+  background-color: #31cbff;
+  color: black;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 22px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.card-blog .blog-btn:hover {
+  background-color: transparent;
+  border: 2px solid #31cbff;
+  color: #31cbff;
+}
+
+/******************************************** INI BAGIAN OUR TEAM ********************************************/
+
+.ourteam {
+  background-color: #101010;
+  padding: 60px 0px 100px 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+.title-team h2 {
+  color: white;
+  font-size: 75px;
+  width: 1100px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.card-cell img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.card-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  line-height: 9.5px;
+}
+
+.card-team {
+  height: 375px;
+  width: 320px;
+  padding: 20px 20px 35px 20px;
+  background-color: #101010;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-cell p {
+  color: #cacaca;
+  font-size: 13px;
+}
+
+/**************************************** INI BAGIAN FOOTER *****************************************/
+
+/* ganti background, mengatur height dan width, mengatur padding atas dan warna text */
+
+footer {
+  width: 100%;
+  height: 100vh;
+  background: #131313;
+  border-top: 1px solid #494949;
+}
+.footer-left {
+  background: #131313;
+  height: 80vh;
+  width: 50%;
+  padding-top: 130px;
+  padding-left: 50px;
+  color: white;
+}
+
+.content-box {
+  display: flex;
+  height: 91vh;
+}
+
+.footer-right {
+  background: #131313;
+  height: 80vh;
+  width: 50%;
+  padding-top: 120px;
+  padding-left: 5px;
+  color: white;
+}
+
+/* mengatur display agar item sejajar, mengatur align dan berberbaris kebawah */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* menggati ukuran huruf dan ketebalannya, membuat huruf besar disetiap awal kata dan mengatur jarak antar baris */
+.footer-content h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+/* mengatur lebar maksimal, mengatura margin dan jarak antar baris, menggati ukuran huruf */
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 23px;
+  font-size: 14px;
+  color: #cacaca;
+  margin-bottom: 30px;
+}
+
+/* menghilangkan list style, membuat item sejajar, mengatur posisi dan juga margin */
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+/* mengatur margin kiri dan kanan */
+.socials li {
+  margin: 0 10px;
+}
+
+/* menghilangkan text dekorasi dari a dan mengatur warnanya */
+.socials a {
+  text-decoration: none;
+  color: white;
+}
+
+/* mengatur ukuran dari icon dan memberi transisi */
+.socials a i {
+  font-size: 2rem;
+  transition: color 0.4s ease;
+}
+
+.socials .git i{
+  font-size: 2.3rem;
+}
+
+/* transisi agar icon berubah warna saat cursor diarahkan ke atasnya */
+.socials a:hover i {
+  color: #31cbff;
+}
+
+/* memberi warna footer, mengatur lebar dan padding, mengatur text align */
+.footer-bottom {
+  background: #131313;
+  border-top: 2px solid #494949;
+  border-radius: 40%;
+  width: 90%;
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* menganti ukuran teks, mengatur jarak antar huruf dan memberi huruf besar pada setiap awal teks */
+.footer-bottom p {
+  font-size: 13px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  color: #cacaca;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin-left: 50px;
+}
+
+.contact-form .text-box {
+  background-color: #101010;
+  color: white;
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child {
+  margin-right: 15px;
+}
+
+.contact-form textarea {
+  background: #101010;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-btn {
+  float: right;
+  background: #31cbff;
+  color: black;
+  border: 2px solid transparent;
+  width: 120px;
+  height: 50px;
+  line-height: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+
+.contact-form .send-btn:hover {
+  background-color: transparent;
+  border: 2px solid #31cbff;
+  color: #31cbff;
+}
+
+
